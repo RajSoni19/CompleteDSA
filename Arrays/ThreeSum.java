@@ -23,8 +23,8 @@ import java.util.*;
                     ans.add(temp);
                     j++;
                     k--;
-                    while(j<k&&arr[j]==arr[j-1]) j++;
-                    while(j<k&&arr[k]==arr[k+1]) k--;
+                    while(j<k&&arr[j]==arr[j-1]) j++; //to skip duplicate
+                    while(j<k&&arr[k]==arr[k+1]) k--; //to skip duplicate
                 }
             }
           }

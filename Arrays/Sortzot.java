@@ -27,11 +27,17 @@ public class Sortzot {
     // }
 
     //OPTIMAL
+
+// We divide the array into three partitions using three pointers – low, mid, and high.
+// From 0 to low-1, we’ll keep only 0s
+// From low to mid-1, only 1s
+// From high+1 to n-1, only 2
     public static void Sorted(int arr[],int n){
         int low=0;
         int mid=0;
         int high=n-1;
         while(mid<=high){
+              // If current element is 0, swap with low and move both pointers forward
             if(arr[mid]==0){
                int temp=arr[low];
                arr[low]=arr[mid];
@@ -39,9 +45,13 @@ public class Sortzot {
                low++;
                mid++;
             }
+
+            // If arr[mid] == 1, it’s already in the middle section → just move mid.
             else if(arr[mid]==1){
                    mid++;
             }
+
+            // If arr[mid] == 2, it belongs to the right section → swap with high, only move high.
             else{
                 int t=arr[mid];
                 arr[mid]=arr[high];
