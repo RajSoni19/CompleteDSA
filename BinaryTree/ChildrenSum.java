@@ -1,7 +1,6 @@
 package BinaryTree;
-import java.util.*;
 
-public class BNode{
+class BNode{
 
     int data;
     BNode left;
