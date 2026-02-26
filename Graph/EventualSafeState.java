@@ -39,6 +39,7 @@ public class EventualSafeState {
        return ans;
     }
     public static void main(String[] args) {
+        //Main Logic of Program is Reverse Direction of Edges in Graph and then apply kahn's algo (TOPO SORT);
          List<Integer>[] adj = new ArrayList[12];
         for (int i = 0; i < 12; i++) {
             adj[i] = new ArrayList<>();
