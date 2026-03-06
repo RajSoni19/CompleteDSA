@@ -25,7 +25,7 @@ public class CourseSchedule1 {
         int cnt=0;
         while(!q.isEmpty()){
             int node=q.poll();
-            cnt++;
+            cnt++; // count number of proceed nodes
             for(int n:adj.get(node)){
                 indeg[n]--;
                 if(indeg[n]==0){
