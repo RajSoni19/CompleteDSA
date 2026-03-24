@@ -54,7 +54,7 @@ public class TwoSum{
                 int sum=arr[left]+arr[right];
                 if(sum==target){
                     
-                 System.out.println(arr[left]+" "+ arr[right]);
+                 System.out.println(left+" "+ right);
                   return;
                 }
                 if(sum<target) left++;
