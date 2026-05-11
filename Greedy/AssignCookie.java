@@ -1,7 +1,13 @@
 package Greedy;
 import java.util.*;
 public class AssignCookie {
-
+// Assign Cookies
+// Activity Selection
+// Fractional Knapsack
+// Minimum Platforms
+// Job Sequencing
+// Jump Game
+// Gas Station
     public static int getcount(int g[],int s[]){
         Arrays.sort(g);
         Arrays.sort(s);
