@@ -14,17 +14,17 @@ public class NextPermutation {
 
        public static void next(int arr[],int n){
           int ind=-1;
-          for(int i=n-2;i>=0;i--){
+          for(int i=n-2;i>=0;i--){  //finding break point
             if(arr[i]<arr[i+1]){
                 ind=i;
                 break;
             }
           }
-          if(ind==-1) {
+          if(ind==-1) { // if break point not there then reverse arr
             reverse(arr, 0, n-1);
             return;
           }
-          for(int i=n-1;i>ind;i--){
+          for(int i=n-1;i>ind;i--){ // after getting break point find next greater element then  breakpoint available on right side that is smaller in right side
             if(arr[i]>arr[ind]){
                 int temp=arr[i];
                 arr[i]=arr[ind];
@@ -32,7 +32,7 @@ public class NextPermutation {
                 break;
             }
           }
-          reverse(arr, ind+1, n-1);
+          reverse(arr, ind+1, n-1); // then reverse entire right half
           for(int i=0;i<n;i++){
             System.out.println(arr[i]);
           } 
